@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+</head>
+<body>
+    <h1>Question 1</h1>
+    <div id="container"><button id="show" onclick="common()">Show</button></div>
+    <script>
+        
+        function common(){
+            var a = document.getElementById("show");
+            if(a.innerText == "Show"){
+                a.innerText = "Hide";
+                var d = document.createElement("div");
+                var p = document.createElement("img");
+                p.src = "./download.jpg";
+                p.style.marginTop = "100px";
+                d.appendChild(p);
+                document.getElementById('container').appendChild(d);
+            }else{
+                a.innerText = "Show";
+                var x = document.getElementsByTagName("img");
+                console.log(x);
+                x[0].style.display = "none";
+            }
+        }
+        
+    </script>
+</body>
+</html>
