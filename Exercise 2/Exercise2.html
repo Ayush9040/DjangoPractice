@@ -38,10 +38,19 @@
             <input type="number" name="mobile">
         </div>
         <div class="input-div">
+            <label for="gender">Gender: </label>
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+        </div>
+        <div class="input-div">
             <label for="courses">Courses: </label>
-            <input type="checkbox" name="c">C
-            <input type="checkbox" name="cpp">C++
-            <input type="checkbox" name="python">Python
+            <input type="checkbox" name="c"> C
+            <input type="checkbox" name="cpp"> C++
+            <input type="checkbox" name="python"> Python
+        </div>
+        <div class="input-div">
+            <label for="mobile">Address: </label>
+            <textarea name="address" cols="30" rows="5" required></textarea>
         </div>
         <div class="input-div">
             <input type="submit" value="Submit">
@@ -50,7 +59,38 @@
 
     <script>
         function validation(){
-            alert("Hello");
+            flag = true;
+            i = document.getElementsByTagName('input');
+
+            if(i[1].value.length < 4 || i[1].value.length>=12){
+                flag = false;
+            }
+
+            if(i[2].value.length != 10){
+                flag = false;
+            }
+
+            for(k=3; k<=4; k++){
+                if(i[k].checked == true){
+                    break;
+                }
+            }
+
+            if(k == 5){
+                flag = false;
+            }
+
+            for(j=5; j<=7; j++){
+                if(i[j].checked == true){
+                    break;
+                }
+            }
+
+            if(j == 8){
+                flag = false;
+            }
+
+            return flag;
         }
     </script>
 </body>
