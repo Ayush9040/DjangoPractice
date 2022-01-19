@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+</head>
+
+<style>
+    #count{
+        display: none;
+    }
+</style>
+<body>
+    <p id="count">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eum reiciendis inventore, harum maiores repudiandae magnam, maxime nisi culpa quod rerum nemo deleniti vel, accusantium corrupti dolorum pariatur possimus aut?</p>
+    <button onclick="delay()">Show after 10 sec</button>
+
+    <script>
+        function show(){
+            document.getElementById('count').style.display = 'block';
+        }
+
+        function delay(){
+            setTimeout(show, 10000);
+        }
+    </script>
+</body>
+</html>
