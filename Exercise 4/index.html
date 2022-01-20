@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown Timer</title>
+</head>
+<style>
+    #count{
+        font-size: 20px;
+    }
+</style>
+<body>
+    <p id="count">10</p>
+
+    <script>
+        function decreaseCount(){
+            i = document.getElementById('count');
+            if(i.innerText == 10){
+                for(j=1; j<=10; j++){
+                    i.innerText = 10 - j;
+                }
+            }
+        }
+
+        setInterval(() => {
+            i = document.getElementById('count');
+            if(i.innerText > 0){
+                i.innerText = i.innerText - 1;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
